@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Things</title>
+    <style>
+        :root {
+            --primary: #ffd700;
+            --secondary: #FF6B6B;
+            --dark: #333333;
+            --light: #FFF9E6;
+        }
 
+        body {
+            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: rgb(72, 40, 2);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .character-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .nailong-img {
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            width: 300px;
+        }
+
+        .character-container img {width; 300px;
+        }
+
+        h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+        color: var(--primary);
+        font-size: 2rem;
+        border-bottom: 3px dashed var(--primary);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        }
+
+         //untuk animasi//
+        @keyframes bounceIn {
+        0% {
+        transform: scale(0.8);
+        opacity: 0;
+        }
+        60% {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+        h1, h2 {
+        animation: bounceIn 1s ease-out;
+        }
+
+        ul {
+        background-color: #FFF0F0;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-left: 1.5rem;
+        }
+
+        li {
+        margin-bottom: 0.8rem;
+        padding-left: 0.5rem;
+
+        footer {
+        background-color: var(--dark);
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 2rem;
+        }
+
+        .spotify-embed {
+        position: relative;
+        padding-bottom: 56.25%;
+        margin: 2rem 0;
+        }
+
+        .spotify-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        }
+
+        img {
+        border-radius: 8px;
+        margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+        .character-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi, This is Dea's Favorite Things</h1>
+        <p>Ini adalah beberapa hal yang Dea suka.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Nailong</a></li>
+            <li><a href="#music">Lagu Favorit</a></li>
+            <li><a href="#novel">Novel Favorit</a></li>
+            <li><a href="#pantai">Aku Suka Pantai</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>Nailong</h2>
+            <div class="character-container">
+            <img src="nailongcss.jpg" alt="Nailong" class="nailong-img">
+
+                <div class="character-info">
+                    <p>Nailong itu naga kuning yang menggemaskan,tapi banyak banget yang bilang ini dino. Oh iya, animasinya dalam bahasa Mandarin lohh. Nailong selucu ituu.</p>
+
+                    <h3>Alasan aku suka Nailong adalah:</h3>
+                    <ul>
+                        <li>Pipinya chubby</li>
+                        <li>Cara dia ngomong Mandarin tuh lucu banget</li>
+                        <li>Kepribadiannya ceria dan manja</li>
+                        <li>Dan, jujur, masih banyak lagiii. Kalau ditambahkan mau sebanyak apa cobaaa? hihi</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="music">
+            <h2>Lagu Favoritku</h2>
+            <p>Lagu ini lagi sering aku dengarkan akhir-akhir ini. Kalau dibilang favorit.. mungkin sementara iyaaa.</p>
+            <div class="spotify-embed">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/3Z9RDHetSqrfqCl31fcSN2?utm_source=generator"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+                <br>
+                <h3>Alasan aku suka lagu ini</h3>
+                    <ul>
+                        <li>Karena bahasa mandarin, jadi bisa sambil belajar gitu gais</li>
+                        <li>Melloww gituu</li>
+                        <li>Enak didengerin buat pengantar tidur</li>
+            </div>
+        </section>
+
+        <section id="novel">
+            <h2>Novel Favoritku</h2>
+            <img src="NovelTentangKamucss.jpeg" alt="novel" width="200">
+            <p>Salah satu karya Tere Liye yang kusuka itu <strong>Tentang Kamu</strong>. Ini novel pertama yang kubaca sampai habis, waktu itu kelas 8, dan benar-benar terpukau dengan alur cerita.</p>
+                <h3>Kalau ditanya "Emangnya tentang apa sih?"</h3>
+                     <ul>
+                        <li>Menceritakan tentang perjalanan seorang pengacara muda yang bernama Zaman, yang ditugaskan untuk menyelidiki warisan besar milik Sri Ningsih. Ia seorang wanita yang misterius yang baru saja meninggal di Paris. Dari masa kecilnya di Indonesia, hingga masa tuanya di luar negri.</li>
+                        <li>Dari situ, terungkap banyak kisah tentang pengorbanan, ketabahan, cinta, dan memaafkan, yang benar-benar menyentuh hati.</li>
+                        <li>Ini sampulnya cetakan terbaru, dulu waktu aku baca, sampulnya masih pakai yang warna coklat dengan objek sepasang sepatu usang.</li>
+                    </ul>
+        </section>
+
+        <section id="pantai">
+            <h2>Aku suka pantai</h2>
+            <div class="character-container">
+            <img src="Pantaicss.jpg" alt="pantai" width="200"> 
+            <p>Aku suka banget sama pantai, dari aku masih kecil, sampai saat ini, euphoria waktu di pantai tuh ga berubah sama sekaliii.</p>
+                <h3>Kalau ditanya kenapa suka, mungkin aku bakal jawab....</h3>
+                     <ul>
+                        <li>Suasananya tenang, bikin damai.</li>
+                        <li>Cocok banget buat healing.</li>
+                        <li>sunset yang indah... suara deburan ombak.</li>
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Favorite Things - Dea Olivia</p>
+    </footer>
+</body>
+</html>
